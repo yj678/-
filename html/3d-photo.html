@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>♥</title>
+        <!-- <script src="ranse.js"></script> -->
+        <style>
+            
+    html{
+    background-image: url("https://scpic.chinaz.net/files/pic/pic9/201804/zzpic11299.jpg");
+    background-size:cover;  
+   background-attachment:fixed;        
+ 
+
+}
+/*最外层容器样式*/
+.wrap{
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    /*改变左右上下,图片方块移动*/
+    
+}
+/*包裹所有容器样式*/
+.cube{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-80deg);
+    -webkit-animation: rotate 20s infinite;
+    /*匀速*/
+    animation-timing-function: linear;
+}
+    @-webkit-keyframes 
+   rotate{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cube div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.8;
+    transition: all .4s;
+}
+/*定义所有图片样式*/
+.pic{
+    width: 200px;
+    height: 200px;
+}
+.cube .out_front{
+    transform: rotateY(0deg) translateZ(100px);
+}
+.cube .out_back{
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.cube .out_left{
+    transform: rotateY(90deg) translateZ(100px);
+}
+.cube .out_right{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.cube .out_top{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.cube .out_bottom{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+/*定义小正方体样式*/
+.cube span{
+    display: bloack;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.cube .in_pic{
+    width: 100px;
+    height: 100px;
+}
+.cube .in_front{
+    transform: rotateY(0deg) translateZ(50px);
+}
+.cube .in_back{
+    transform: translateZ(-50px) rotateY(180deg);
+}
+.cube .in_left{
+    transform: rotateY(90deg) translateZ(50px);
+}
+.cube .in_right{
+    transform: rotateY(-90deg) translateZ(50px);
+}
+.cube .in_top{
+    transform: rotateX(90deg) translateZ(50px);
+}
+.cube .in_bottom{
+    transform: rotateX(-90deg) translateZ(50px);
+}
+/*鼠标移入后样式*/
+.cube:hover .out_front{
+    transform: rotateY(0deg) translateZ(200px);
+}
+.cube:hover .out_back{
+    transform: translateZ(-200px) rotateY(180deg);
+}
+.cube:hover .out_left{
+    transform: rotateY(90deg) translateZ(200px);
+}
+.cube:hover .out_right{
+    transform: rotateY(-90deg) translateZ(200px);
+}
+.cube:hover .out_top{
+    transform: rotateX(90deg) translateZ(200px);
+}
+.cube:hover .out_bottom{
+    transform: rotateX(-90deg) translateZ(200px);
+}
+
+        </style>
+    </head>
+    <body>
+        
+        <!--/*外层最大容器*/-->
+        <div class="wrap">
+    <!--    /*包裹所有元素的容器*/-->
+        
+        <div class="cube">
+            <!--前面图片 -->
+            <div class="out_front">
+                <img src="1.jpg"  class="pic"/>
+            </div>
+            <!--后面图片 -->
+            <div class="out_back">
+                 <img src="1.jpg"  class="pic"/>
+            </div>
+            <!--左图片 -->
+            <div class="out_left">
+                 <img src="1.jpg"  class="pic"/>
+            </div>
+            <div class="out_right">
+                 <img src="1.jpg"  class="pic"/>
+            </div>
+            <div class="out_top">
+                 <img src="1.jpg"  class="pic"/>
+            </div>
+            <div class="out_bottom">
+                 <img src="1.jpg"  class="pic"/>
+            </div>
+            <!--小正方体 --> 
+             <span class="in_front">
+                <img src="1.jpg" class="in_pic" />
+            </span>
+            <span class="in_back">
+                 <img src="1.jpg" class="in_pic" />
+            </span>
+            <span class="in_left">
+               <img src="1.jpg" class="in_pic" />
+            </span>
+            <span class="in_right">
+               <img src="1.jpg" class="in_pic" />
+            </span>
+            <span class="in_top">
+               <img src="1.jpg" class="in_pic" />
+            </span>
+            <span class="in_bottom">
+                <img src="1.jpg" class="in_pic" />
+            </span>
+        </div>
+          <div><a href="donghua.html"></a></div>
+        </div>
+        <script >
+            !function(e,t,a){function n(){c(".love{width: 20px;height: 20px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.love:after,.love:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.love:after{top: -10px;}.love:before{left: -10px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="love",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"#cc2a5d"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+        // rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")
+        </script>
+    </body>
+</html>
