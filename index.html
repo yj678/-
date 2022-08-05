@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流星雨</title>
+    <style>
+        .ee{
+            opacity:55%;
+            background-color: black;
+            width: 100%;
+            height: 180px; 
+            color: #FFC0CB;
+            float: right;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+
+        .rr{
+            text-align: center;
+            width: 100%; 
+            color: #FFC0CB;
+            float: right;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        html{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="ee" >
+        
+    </div>
+    <div class="rr" >
+        <p style="font-size: 25px;">送给宝贝的数字版流星雨</p>
+        <p style="font-size: 25px;">宝贝七夕快乐！</p>
+        <p style="color: #FFC0CB;font-size: 18px;">将在<span id='box'></span>秒后自动跳转到新页面，记得点你老公</p>
+    </div>
+    <div>  
+        <iframe src="2.html" width="100%" frameborder="0" scrolling="no" height="800px"></iframe>  
+    </div> 
+
+
+    <script type="text/javascript">
+        var count = 20;
+        function t1() {
+            if (count>0) {
+                document.getElementById('box').innerHTML=count;
+                --count;
+            } else {
+                clearInterval(t2);
+                window.location.href='index1.html';
+            }
+        }
+        var t2 = setInterval(t1,1000);
+    
+    </script>
+
+
+
+</body>
+</html>
